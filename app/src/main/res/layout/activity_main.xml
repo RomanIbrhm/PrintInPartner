@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F4FD"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Latar Belakang Ungu di Atas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="#9D65CB"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print.in Partner"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftarkan Mitra Baru"
+                android:textColor="#E4D1F9"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Card Putih Formulir -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Toko"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#9D65CB"
+                    android:layout_marginBottom="24dp"
+                    android:textAlignment="center"/>
+
+                <!-- Input Nama Toko -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0EBF8"
+                    android:layout_marginBottom="16dp">
+                    <EditText
+                        android:id="@+id/etNamaToko"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Nama Toko Print"
+                        android:textColorHint="#757575"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="20dp"
+                        android:inputType="textPersonName"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Input Alamat -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0EBF8"
+                    android:layout_marginBottom="16dp">
+                    <EditText
+                        android:id="@+id/etAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Alamat Lengkap"
+                        android:textColorHint="#757575"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="20dp"
+                        android:inputType="textPostalAddress"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Input Jenis Print -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0EBF8"
+                    android:layout_marginBottom="16dp">
+                    <EditText
+                        android:id="@+id/etJenisPrint"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Jenis (Misal: A4 Hitam Putih)"
+                        android:textColorHint="#757575"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="20dp"
+                        android:inputType="text"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Input Harga -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#F0EBF8"
+                    android:layout_marginBottom="32dp">
+
+                    <EditText
+                        android:id="@+id/etHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Harga per Lembar (Rp)"
+                        android:textColorHint="#757575"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="20dp"
+                        android:inputType="number"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Tombol Simpan -->
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Simpan Data"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:backgroundTint="#9D65CB"
+                    app:cornerRadius="30dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Tombol Lihat Data -->
+                <Button
+                    android:id="@+id/btnLihatData"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Lihat Daftar Mitra"
+                    android:textColor="#9D65CB"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:backgroundTint="#FFFFFF"
+                    app:strokeColor="#9D65CB"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="30dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
