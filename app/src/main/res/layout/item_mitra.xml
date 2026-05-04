@@ -1,89 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginVertical="8dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="4dp"
-    app:cardBackgroundColor="#FFFFFF">
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="3dp"
+    app:strokeColor="#000000"
+    app:cardBackgroundColor="#E0F4FF"> <!-- Latar Biru Pastel -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <!-- Ikon Bulat Inisial Toko (Tetap di kiri) -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:cardCornerRadius="25dp"
-            app:cardBackgroundColor="#9D65CB"
-            app:cardElevation="0dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="P"
-                android:textColor="#FFFFFF"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Informasi Teks (Disusun 3 Grid Vertikal) -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="16dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <!-- Baris 1: Nama Toko -->
-            <TextView
-                android:id="@+id/tvItemNama"
-                android:layout_width="wrap_content"
+            <!-- Ikon Kotak (Warna Pink Cerah) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#FF90E8"
+                app:strokeWidth="3dp"
+                app:strokeColor="#000000"
+                app:cardElevation="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="P"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Teks Nama & Alamat -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Nama Toko"
-                android:textColor="#424242"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
 
-            <!-- Baris 2: Alamat (Bisa memanjang ke bawah bebas) -->
-            <TextView
-                android:id="@+id/tvItemAlamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alamat"
-                android:textColor="#9E9E9E"
-                android:textSize="12sp"
-                android:layout_marginTop="4dp"/>
+                <TextView
+                    android:id="@+id/tvItemNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Toko"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
-            <!-- Baris 3: Jenis Print -->
+                <TextView
+                    android:id="@+id/tvItemAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Pembatas Garis -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#000000"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Bagian Bawah: Jenis & Badge Harga -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Background Putih untuk Jenis Print biar kontras -->
             <TextView
                 android:id="@+id/tvItemJenis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A4 Warna"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+
+            <!-- Badge Harga Hijau Neon -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis: A4 Warna"
-                android:textColor="#9D65CB"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"/>
-
-            <!-- Baris 4: Harga -->
-            <TextView
-                android:id="@+id/tvItemHarga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp 500"
-                android:textColor="#0FD18B"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="2dp"/>
-
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#DDF247"
+                app:strokeWidth="2dp"
+                app:strokeColor="#000000"
+                app:cardElevation="0dp"
+                android:layout_marginStart="8dp">
+                <TextView
+                    android:id="@+id/tvItemHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="Rp 500"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
